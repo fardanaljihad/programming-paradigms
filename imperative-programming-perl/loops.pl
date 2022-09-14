@@ -22,5 +22,5 @@ my @array = ("James Bond 007", "Department of Statistics", "University of Oxford
 my $i;
 
 for($i = 0; $i <= $#array; $i++) {
-    @array[$i] =~ /[0-9]/ ? print "@array[$i]\n" : print uc(@array[$i]), "\n";
+    $array[$i] =~ /[0-9]/ ? print "$array[$i]\n" : print uc($array[$i]), "\n";
 }
