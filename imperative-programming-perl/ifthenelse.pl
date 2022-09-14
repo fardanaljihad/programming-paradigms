@@ -51,11 +51,14 @@ do {
     $r = <STDIN>;
 
     if ($r < 0) {
-        print "The radius of a circle must be a positive number.\n";
+        print "The radius of a circle must be a positive number. Please try again...\n";
+        print "Radius = ";
     }
 } while ($r < 0);
 
 $area = PI * $r * $r;
+
+print "Luas lingkaran = ", $area, "\n";
 
 if ($area > 100) {
     print "This is a big circle.";
