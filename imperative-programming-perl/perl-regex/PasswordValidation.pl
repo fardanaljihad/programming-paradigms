@@ -19,9 +19,9 @@ do {
        ($pwd =~ m/\d/)) {
             $validation = 1;
        }
-       else {
+    else {
         print 
         "Gunakan minimal 10 karakter dengan campuran huruf kapital, huruf kecil, angka, dan simbol.\n";
         print "Silakan coba lagi.\n";
-       }
+    }
 } while($validation == 0);
