@@ -18,6 +18,7 @@ do {
        ($pwd =~ m/[^A-Za-z0-9]/) and
        ($pwd =~ m/\d/)) {
             $validation = 1;
+            print "Password is valid.";
        }
     else {
         print 
