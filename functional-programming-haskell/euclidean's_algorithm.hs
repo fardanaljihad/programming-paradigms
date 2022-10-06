@@ -1,5 +1,5 @@
-eGCD :: (Integer, Integer) -> Integer
-eGCD(x, y)
+gcde :: (Integer, Integer) -> Integer
+gcde(x, y)
     | (x == y) = x
-    | (x > y) = eGCD((x - y), y)
-    | otherwise = eGCD(y, (y - x))
+    | (x > y) = gcde((x - y), y)
+    | otherwise = gcde(y, (y - x))
