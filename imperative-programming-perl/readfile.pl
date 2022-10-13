@@ -12,8 +12,8 @@ open(FH, $infile) or die "Cannot open $infile\n";
     {
         chomp($line);
         my @linedat = split(/,/, $line); # splits the line at commas
-        my $fruit = $linedat[0];
-        my $quantity = $linedat[1];
+        my $fruit = $linedat[1];
+        my $quantity = $linedat[3];
         my $unitprice = $linedat[2];
         $unitprice = sprintf('%0.2f', $unitprice); # converts the unit price into 2 decimal places
         print "We have $quantity of $fruit at $unitprice pounds
