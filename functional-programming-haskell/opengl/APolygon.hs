@@ -3,7 +3,7 @@ import Graphics.Rendering.OpenGL
 
 main = do
     (progName,_) <-getArgsAndInitialize
-    createAWindow progName
+    createAWindow "A Polygon"
     mainLoop
 
 createAWindow windowName = do
