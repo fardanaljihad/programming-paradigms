@@ -12,7 +12,7 @@ createAWindow windowName = do
 
 displayPoints = do
     clear [ColorBuffer]
-    currentColor $= Color4 1 0 0.5 0
+    currentColor $= Color4 0 0 1 0
     renderPrimitive Polygon
         $mapM_ (\(x, y, z)->vertex$Vertex3 x y z) myPoints
     flush
