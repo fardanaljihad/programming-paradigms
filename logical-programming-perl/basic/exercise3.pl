@@ -18,3 +18,7 @@ tweets(susan,tweet10).
 
 /* 3. (a) Add rules 'friends' to find person who are friend (i.e follow each other). */
 friends(X, Y) :- follows(X, Y), follows(Y, X).
+
+/* 3. (b) Add rules 'freed_sees' to find tweet which can Freed see (assuming the only direct 
+followers will see at tweet) */
+freed_sees(X, T) :- follows(X, Y), tweets(Y, T).
