@@ -21,4 +21,14 @@ male(dave).
 /* Soal 1a */
 grandfather(X, Y) :- male(X), parent(X, Z), parent(Z, Y).
 /* Soal 1b */
-aunt(X, Y) :- female(X), parent(Z, Y), parent(W, Z), parent(W, X).
+married(M, F) :- male(M), female(F), parent(M, C), parent(F, C).
+aunt(A, X) :- 
+    ( female(A), 
+      parent(G, A), 
+      grandfather(G, X), 
+      not(parent(A, X));
+      female(A),
+      married(M, A),
+      parent(G, M),
+      not(parent(A, X))
+    ).
