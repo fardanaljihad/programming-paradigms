@@ -7,4 +7,4 @@ subdir(research, work).
 subdir(teaching, work).
 
 /* 2. (b) Add rules 'descendants' to retrieve descendant nodes */
-descendants(X, Y) :- subdir(X, Y); subdir(X, Z), descendant(Z, Y).
+descendants(X, Y) :- subdir(X, Y); subdir(X, Z), descendants(Z, Y).
