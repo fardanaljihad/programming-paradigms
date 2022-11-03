@@ -1,9 +1,10 @@
 /* 2. (a) Knowledge base */
-subdir(documents, private).
-subdir(documents, work).
-subdir(private, images).
-subdir(private, videos).
-subdir(work, research).
-subdir(work, teaching).
+subdir(private, documents).
+subdir(work, documents).
+subdir(images, private).
+subdir(videos, private).
+subdir(research, work).
+subdir(teaching, work).
 
 /* 2. (b) Add rules 'descendants' to retrieve descendant nodes */
+descendant(X, Y) :- subdir(X, Y); subdir(X, Z), descendant(Z, Y).
