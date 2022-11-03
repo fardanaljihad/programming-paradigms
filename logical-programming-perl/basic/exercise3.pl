@@ -15,3 +15,6 @@ tweets(john,tweet4).
 tweets(julie,tweet6).
 tweets(susan,tweet9).
 tweets(susan,tweet10).
+
+/* 3. (a) Add rules 'friends' to find person who are friend (i.e follow each other). */
+friends(X, Y) :- follows(X, Y), follows(Y, X).
